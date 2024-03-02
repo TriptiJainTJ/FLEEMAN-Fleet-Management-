@@ -1,0 +1,25 @@
+
+
+INSERT INTO `proJava`.`state_master` (`state_id`, `state_name`) VALUES ('1', 'Bihar');
+
+INSERT INTO `proJava`.`city_master` (`city_id`, `city_name`, `state_id`) VALUES ('1', 'Patna', '1');
+
+INSERT INTO `proJava`.`car_type` (`car_type_id`, `car_type_name`, `daily_rate`, `image_path`, `monthly_rate`, `weekly_rate`) VALUES ('1', 'Hatchback', '100', 'demo', '2200', '600');
+
+INSERT INTO `proJava`.`car` (`car_id`, `capacity`, `car_name`, `car_type_id`, `fuel_type`, `hub_id`, `is_available`, `maintenance_due_date`, `mileage`, `number_plate`) VALUES ('1', '20', 'Swift', '1', 'Diesel', '1', 'Y', '2024-10-01', '30', '1111');
+
+INSERT INTO `proJava`.`add_on` (`addon_id`, `addon_daily_rate`, `addon_name`, `rate_valid_until`) VALUES ('1', '50', 'Kit', '2024-06-01');
+
+INSERT INTO `proJava`.`hub` (`hub_id`, `city_id`, `contact_number`, `hub_address_and_details`, `hub_name`, `state_id`) VALUES ('1', '1', '999999999', 'Patna', 'Patna_Hub1', '1');
+
+INSERT INTO `proJava`.`airport` (`airport_id`, `airport_code`, `airport_name`, `city_id`, `hub_id`, `state_id`) VALUES ('1', '111', 'Patna', '1', '1', '1');
+
+INSERT INTO `proJava`.`customer` (`customer_id`, `address_line1`, `address_line2`, `city`, `credit_card_number`, `credit_card_type`, `date_of_birth`, `driving_license_number`, `email`, `first_name`, `idp_number`, `issued_bydl`, `last_name`, `mobile_number`, `passport_issue_date`, `passport_issued_by`, `passport_number`, `passport_valid_from`, `passport_valid_through`, `password`, `phone_number`, `pincode`, `valid_throughdl`) VALUES ('1', '1 Colony', '2 Colony', 'Patna', '11111', 'VISA', '2001-01-01', '111', 'abc@gmail.com', 'Ritik', '111', 'RTO', 'Modi', '999999999', '2020-01-01', 'Govt', '111', '2020-01-01', '2025-01-01', 'xyz', '888888888', '111111', '2025-01-01');
+
+INSERT INTO `proJava`.`booking` (`booking_id`, `address`, `booking_date`, `daily_rate`, `end_date`, `first_name`, `last_name`, `monthly_rate`, `pin`, `start_date`, `state`, `weekly_rate`, `cartype_id`, `cust_id`) VALUES ('1', 'Patna', '2024-03-31', '100', '2024-04-10', 'Ritik', 'Modi', '2200', '111111', '2024-04-01', 'Bihar', '600', '1', '1');
+
+INSERT INTO `proJava`.`booking_detail` (`booking_detail_id`, `addon_id`, `addon_rate`, `booking_id`) VALUES ('1', '1', '50', '1');
+
+INSERT INTO `proJava`.`invoice` (`invoice_id`, `c_aadhar_no`, `c_email_id`, `c_mobile_no`, `c_name`, `c_pass_no`, `emp_name`, `end_date`, `handover_date`, `rate`, `rental_amount`, `start_date`, `total_addon_amount`, `total_amount`, `booking_id`, `car_id`, `customer_id`) VALUES ('1', '11111', 'abc@gmail.com', '999999999', 'Ritik', '111', 'xyz', '2024-04-10', '2024-04-10', '100', '1000', '2024-04-01', '50', '1050', '1', '1', '1');
+
+INSERT INTO `proJava`.`invoice_detail` (`idetail_id`, `amt`, `addon_id`, `invoice_id`) VALUES ('1', '1050', '1', '1');
